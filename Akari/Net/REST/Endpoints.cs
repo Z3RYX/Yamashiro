@@ -37,56 +37,56 @@ namespace Akari.Net.REST
         internal static string GetGuildIconEndpoint(ISnowFlake GUILD_ID, string GUILD_ICON, bool ANIMATED, CDNExtension EXT)
         {
             string ext = GetExtension(EXT);
-            return CustomEmoji.Replace("%GUILD_ID%", GUILD_ID.ToString()).Replace("%ANI%", ANIMATED ? "a_" : "").Replace("%GUILD_ICON%", GUILD_ICON).Replace("%EXT%", ext);
+            return GuildIcon.Replace("%GUILD_ID%", GUILD_ID.ToString()).Replace("%ANI%", ANIMATED ? "a_" : "").Replace("%GUILD_ICON%", GUILD_ICON).Replace("%EXT%", ext);
         }
 
         internal static string GetGuildSplashEndpoint(ISnowFlake GUILD_ID, string GUILD_SPLASH, CDNExtension EXT)
         {
             string ext = GetExtension(EXT);
-            return CustomEmoji.Replace("%GUILD_ID%", GUILD_ID.ToString()).Replace("%GUILD_SPLASH%", GUILD_SPLASH).Replace("%EXT%", ext);
+            return GuildSplash.Replace("%GUILD_ID%", GUILD_ID.ToString()).Replace("%GUILD_SPLASH%", GUILD_SPLASH).Replace("%EXT%", ext);
         }
 
         internal static string GetGuildDiscoverySplashEndpoint(ISnowFlake GUILD_ID, string GUILD_DISCOVERY_SPLASH, CDNExtension EXT)
         {
             string ext = GetExtension(EXT);
-            return CustomEmoji.Replace("%GUILD_ID%", GUILD_ID.ToString()).Replace("%GUILD_DISCOVERY_SPLASH%", GUILD_DISCOVERY_SPLASH).Replace("%EXT%", ext);
+            return GuildDiscoverySplash.Replace("%GUILD_ID%", GUILD_ID.ToString()).Replace("%GUILD_DISCOVERY_SPLASH%", GUILD_DISCOVERY_SPLASH).Replace("%EXT%", ext);
         }
 
         internal static string GetGuildBannerEndpoint(ISnowFlake GUILD_ID, string GUILD_BANNER, CDNExtension EXT)
         {
             string ext = GetExtension(EXT);
-            return CustomEmoji.Replace("%GUILD_ID%", GUILD_ID.ToString()).Replace("%GUILD_BANNER%", GUILD_BANNER).Replace("%EXT%", ext);
+            return GuildBanner.Replace("%GUILD_ID%", GUILD_ID.ToString()).Replace("%GUILD_BANNER%", GUILD_BANNER).Replace("%EXT%", ext);
         }
 
         internal static string GetDefaultUserAvatarEndpoint(int DISCRIMINATOR, CDNExtension EXT)
         {
             int discrim = DISCRIMINATOR % 5;
             string ext = GetExtension(EXT);
-            return CustomEmoji.Replace("%DISCRIM%", discrim.ToString()).Replace("%EXT%", ext);
+            return DefaultUserAvatar.Replace("%DISCRIM%", discrim.ToString()).Replace("%EXT%", ext);
         }
 
         internal static string GetUserAvatarEndpoint(ISnowFlake USER_ID, string USER_AVATAR, bool ANIMATED, CDNExtension EXT)
         {
             string ext = GetExtension(EXT);
-            return CustomEmoji.Replace("%USER_ID%", USER_ID.ToString()).Replace("%ANI%", ANIMATED ? "a_" : "").Replace("%USER_AVATAR%", USER_AVATAR).Replace("%EXT%", ext);
+            return UserAvatar.Replace("%USER_ID%", USER_ID.ToString()).Replace("%ANI%", ANIMATED ? "a_" : "").Replace("%USER_AVATAR%", USER_AVATAR).Replace("%EXT%", ext);
         }
 
         internal static string GetApplicationIconEndpoint(ISnowFlake APP_ID, string APP_ICON, CDNExtension EXT)
         {
             string ext = GetExtension(EXT);
-            return CustomEmoji.Replace("%APP_ID%", APP_ID.ToString()).Replace("%APP_ICON%", APP_ICON).Replace("%EXT%", ext);
+            return ApplicationIcon.Replace("%APP_ID%", APP_ID.ToString()).Replace("%APP_ICON%", APP_ICON).Replace("%EXT%", ext);
         }
 
         internal static string GetApplicationAssetEndpoint(ISnowFlake APP_ID, string ASSET_ID, CDNExtension EXT)
         {
             string ext = GetExtension(EXT);
-            return CustomEmoji.Replace("%APP_ID%", APP_ID.ToString()).Replace("%ASSET_ID%", ASSET_ID).Replace("%EXT%", ext);
+            return ApplicationAsset.Replace("%APP_ID%", APP_ID.ToString()).Replace("%ASSET_ID%", ASSET_ID).Replace("%EXT%", ext);
         }
 
         internal static string GetTeamIconEndpoint(ISnowFlake TEAM_ID, string TEAM_ICON, CDNExtension EXT)
         {
             string ext = GetExtension(EXT);
-            return CustomEmoji.Replace("%TEAM_ID%", TEAM_ID.ToString()).Replace("%TEAM_ICON%", TEAM_ICON).Replace("%EXT%", ext);
+            return TeamIcon.Replace("%TEAM_ID%", TEAM_ID.ToString()).Replace("%TEAM_ICON%", TEAM_ICON).Replace("%EXT%", ext);
         }
 
         private static string GetExtension(CDNExtension EXT)
