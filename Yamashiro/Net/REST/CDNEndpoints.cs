@@ -110,7 +110,7 @@ namespace Yamashiro.Net.REST
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP)) throw new CDNFileExtensionException(EXT);
 
             // Example: https://cdn.discordapp.com/team-icons/123123123123123123/9rh28rh8h08h2f8fh83rh02.webp
-            return $"{Constants.CDNBaseUrl}/app-assets/{TEAM_ID}/{TEAM_ICON}.{GetExtension(EXT)}";
+            return $"{Constants.CDNBaseUrl}/team-icons/{TEAM_ID}/{TEAM_ICON}.{GetExtension(EXT)}";
         }
 
         private static string GetExtension(CDNExtension EXT)
