@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Akari
+namespace Yamashiro
 {
     public class Class1
     {

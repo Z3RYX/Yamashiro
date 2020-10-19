@@ -1,13 +1,13 @@
-﻿using Akari.Models;
-using Akari.Utility;
-using Akari.Utility.Exceptions;
+﻿using Yamashiro.Models;
+using Yamashiro.Utility;
+using Yamashiro.Utility.Exceptions;
 using Microsoft.VisualBasic.CompilerServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Akari.Net.REST
+namespace Yamashiro.Net.REST
 {
     internal static class CDNEndpoints
     {

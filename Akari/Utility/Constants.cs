@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Akari.Utility
+namespace Yamashiro.Utility
 {
     public static class Constants
     {

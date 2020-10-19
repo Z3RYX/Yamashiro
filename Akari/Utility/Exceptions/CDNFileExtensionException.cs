@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Akari.Utility.Exceptions
+namespace Yamashiro.Utility.Exceptions
 {
     public class CDNFileExtensionException : Exception
     {
