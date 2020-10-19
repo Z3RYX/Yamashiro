@@ -100,7 +100,7 @@ namespace Yamashiro.Net.REST
             // Allowed extensions: JPEG, PNG, WebP
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP)) throw new CDNFileExtensionException(EXT);
 
-            // Example: https://cdn.discordapp.com/app-assets/123123123123123123/123123123123123123.webp
+            // Example: https://cdn.discordapp.com/app-assets/123123123123123123/achievements/123123123123123123/icons/9rh28rh8h08h2f8fh83rh02.webp
             return $"{Constants.CDNBaseUrl}/app-assets/{APP_ID}/achievements/{ACHIEVEMENT_ID}/icons/{ICON_HASH}.{GetExtension(EXT)}";
         }
 
