@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akari", "Akari\Akari.csproj", "{98EFDE29-F240-44BC-8D4F-A0D1AE0B57B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yamashiro", "Yamashiro\Yamashiro.csproj", "{98EFDE29-F240-44BC-8D4F-A0D1AE0B57B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
