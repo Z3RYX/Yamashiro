@@ -115,19 +115,14 @@ namespace Yamashiro.Net.REST
 
         private static string GetExtension(CDNExtension EXT)
         {
-            switch (EXT)
+            return EXT switch
             {
-                case CDNExtension.JPEG:
-                    return "jpeg";
-                case CDNExtension.PNG:
-                    return "png";
-                case CDNExtension.WebP:
-                    return "webp";
-                case CDNExtension.GIF:
-                    return "gif";
-                default:
-                    throw new Exception("Not a valid extension");
-            }
+                CDNExtension.JPEG => "jpeg",
+                CDNExtension.PNG => "png",
+                CDNExtension.WebP => "webp",
+                CDNExtension.GIF => "gif",
+                _ => throw new Exception("Not a valid extension"),
+            };
         }
 
         private static bool CheckFileExtension(CDNExtension Target, params CDNExtension[] Checks)

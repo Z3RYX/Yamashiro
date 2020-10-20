@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Yamashiro.Utility.Exceptions
 {
-    public class CDNFileExtensionException : Exception
+    internal class CDNFileExtensionException : Exception
     {
-        public CDNFileExtensionException(CDNExtension EXT) : base("Endpoint does not support file extension " + EXT.ToString()) { }
+        internal CDNFileExtensionException(CDNExtension EXT) : base("Endpoint does not support file extension " + EXT.ToString()) { }
     }
 }
