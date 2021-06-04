@@ -11,7 +11,7 @@ namespace Yamashiro.Net.REST
 {
     internal static class CDNEndpoints
     {
-        internal static string GetCustomEmojiEndpoint(SnowFlake EMOJI_ID ,CDNExtension EXT)
+        internal static string GetCustomEmojiEndpoint(Snowflake EMOJI_ID ,CDNExtension EXT)
         {
             // Allowed extensions: PNG, GIF
             if (!CheckFileExtension(EXT, CDNExtension.PNG, CDNExtension.GIF)) throw new CDNFileExtensionException(EXT);
@@ -20,7 +20,7 @@ namespace Yamashiro.Net.REST
             return $"{Constants.CDNBaseUrl}/emojis/{EMOJI_ID}.{GetExtension(EXT)}";
         }
 
-        internal static string GetGuildIconEndpoint(SnowFlake GUILD_ID, string GUILD_ICON, CDNExtension EXT)
+        internal static string GetGuildIconEndpoint(Snowflake GUILD_ID, string GUILD_ICON, CDNExtension EXT)
         {
             // Allowed extensions: JPEG, PNG, WebP, GIF
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP, CDNExtension.GIF)) throw new CDNFileExtensionException(EXT);
@@ -29,7 +29,7 @@ namespace Yamashiro.Net.REST
             return $"{Constants.CDNBaseUrl}/icons/{GUILD_ID}/{GUILD_ICON}.{GetExtension(EXT)}";
         }
 
-        internal static string GetGuildSplashEndpoint(SnowFlake GUILD_ID, string GUILD_SPLASH, CDNExtension EXT)
+        internal static string GetGuildSplashEndpoint(Snowflake GUILD_ID, string GUILD_SPLASH, CDNExtension EXT)
         {
             // Allowed extensions: JPEG, PNG, WebP
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP)) throw new CDNFileExtensionException(EXT);
@@ -38,7 +38,7 @@ namespace Yamashiro.Net.REST
             return $"{Constants.CDNBaseUrl}/splashes/{GUILD_ID}/{GUILD_SPLASH}.{GetExtension(EXT)}";
         }
 
-        internal static string GetGuildDiscoverySplashEndpoint(SnowFlake GUILD_ID, string GUILD_DISCOVERY_SPLASH, CDNExtension EXT)
+        internal static string GetGuildDiscoverySplashEndpoint(Snowflake GUILD_ID, string GUILD_DISCOVERY_SPLASH, CDNExtension EXT)
         {
             // Allowed extensions: JPEG, PNG, WebP
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP)) throw new CDNFileExtensionException(EXT);
@@ -47,7 +47,7 @@ namespace Yamashiro.Net.REST
             return $"{Constants.CDNBaseUrl}/discovery-splashes/{GUILD_ID}/{GUILD_DISCOVERY_SPLASH}.{GetExtension(EXT)}";
         }
 
-        internal static string GetGuildBannerEndpoint(SnowFlake GUILD_ID, string GUILD_BANNER, CDNExtension EXT)
+        internal static string GetGuildBannerEndpoint(Snowflake GUILD_ID, string GUILD_BANNER, CDNExtension EXT)
         {
             // Allowed extensions: JPEG, PNG, WebP
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP)) throw new CDNFileExtensionException(EXT);
@@ -68,7 +68,7 @@ namespace Yamashiro.Net.REST
             return $"{Constants.CDNBaseUrl}/embed/avatars/{index}.{GetExtension(EXT)}";
         }
 
-        internal static string GetUserAvatarEndpoint(SnowFlake USER_ID, string USER_AVATAR, CDNExtension EXT)
+        internal static string GetUserAvatarEndpoint(Snowflake USER_ID, string USER_AVATAR, CDNExtension EXT)
         {
             // Allowed extensions: JPEG, PNG, WebP, GIF
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP, CDNExtension.GIF)) throw new CDNFileExtensionException(EXT);
@@ -77,7 +77,7 @@ namespace Yamashiro.Net.REST
             return $"{Constants.CDNBaseUrl}/avatars/{USER_ID}/{USER_AVATAR}.{GetExtension(EXT)}";
         }
 
-        internal static string GetApplicationIconEndpoint(SnowFlake APP_ID, string APP_ICON, CDNExtension EXT)
+        internal static string GetApplicationIconEndpoint(Snowflake APP_ID, string APP_ICON, CDNExtension EXT)
         {
             // Allowed extensions: JPEG, PNG, WebP
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP)) throw new CDNFileExtensionException(EXT);
@@ -86,7 +86,7 @@ namespace Yamashiro.Net.REST
             return $"{Constants.CDNBaseUrl}/app-icons/{APP_ID}/{APP_ICON}.{GetExtension(EXT)}";
         }
 
-        internal static string GetApplicationAssetEndpoint(SnowFlake APP_ID, string ASSET_ID, CDNExtension EXT)
+        internal static string GetApplicationAssetEndpoint(Snowflake APP_ID, string ASSET_ID, CDNExtension EXT)
         {
             // Allowed extensions: JPEG, PNG, WebP
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP)) throw new CDNFileExtensionException(EXT);
@@ -95,7 +95,7 @@ namespace Yamashiro.Net.REST
             return $"{Constants.CDNBaseUrl}/app-assets/{APP_ID}/{ASSET_ID}.{GetExtension(EXT)}";
         }
 
-        internal static string GetAchievementIconEndpoint(SnowFlake APP_ID, SnowFlake ACHIEVEMENT_ID, string ICON_HASH, CDNExtension EXT)
+        internal static string GetAchievementIconEndpoint(Snowflake APP_ID, Snowflake ACHIEVEMENT_ID, string ICON_HASH, CDNExtension EXT)
         {
             // Allowed extensions: JPEG, PNG, WebP
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP)) throw new CDNFileExtensionException(EXT);
@@ -104,7 +104,7 @@ namespace Yamashiro.Net.REST
             return $"{Constants.CDNBaseUrl}/app-assets/{APP_ID}/achievements/{ACHIEVEMENT_ID}/icons/{ICON_HASH}.{GetExtension(EXT)}";
         }
 
-        internal static string GetTeamIconEndpoint(SnowFlake TEAM_ID, string TEAM_ICON, CDNExtension EXT)
+        internal static string GetTeamIconEndpoint(Snowflake TEAM_ID, string TEAM_ICON, CDNExtension EXT)
         {
             // Allowed extensions: JPEG, PNG, WebP
             if (!CheckFileExtension(EXT, CDNExtension.JPEG, CDNExtension.PNG, CDNExtension.WebP)) throw new CDNFileExtensionException(EXT);
