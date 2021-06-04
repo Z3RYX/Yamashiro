@@ -6,8 +6,4 @@
     <RootNamespace>Yamashiro</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Utility\Helpers\" />
-  </ItemGroup>
-
 </Project>

@@ -12,6 +12,6 @@ namespace Yamashiro.Utility
 
         internal static readonly string GithubRepo = "https://github.com/Z3RYX/Yamashiro";
         internal static readonly string Version = "0.0.1a";
-        internal static readonly string UserAgent = $"User-Agent: DiscordBot ({GithubRepo}, {Version})";
+        internal static readonly string UserAgent = $"DiscordBot ({GithubRepo}, {Version})";
     }
 }

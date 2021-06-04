@@ -32,7 +32,7 @@ namespace Yamashiro.Models
 
             foreach (PermissionFlag flag in (PermissionFlag[]) Enum.GetValues(typeof(PermissionFlag)))
             {
-                _permissions[flag] = (permissions & (ulong)flag) == 1;
+                _permissions[flag] = (permissions & (ulong)flag) == (ulong)flag;
             }
         }
 
